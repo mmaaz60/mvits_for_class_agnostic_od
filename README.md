@@ -1,4 +1,4 @@
-# MViTS_for_class_agnostic_OD
+# MViTS Excel at Class-agnostic Object Detection
 Multi-modal Transformers Excel at Class-agnostic Object Detection
 
 ## Evaluation
