@@ -9,7 +9,6 @@ import argparse
 import pickle
 import time
 import xml.etree.ElementTree as ET
-from fvcore.common.file_io import PathManager
 import numpy as np
 import json
 import csv
@@ -21,7 +20,7 @@ PERCENTAGE_MEDIUM = 0.2
 
 def parse_voc_rec(filename, metric_type="all"):
     """Parse a PASCAL VOC xml file."""
-    with PathManager.open(filename) as f:
+    with open(filename, 'r') as f:
         tree = ET.parse(f)
     # Get the image width and height
     size = tree.find("size")
