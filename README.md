@@ -1,5 +1,5 @@
-# MViTS Excel at Class-agnostic Object Detection
-Multi-modal Transformers Excel at Class-agnostic Object Detection
+# MViTs Excel at Class-agnostic Object Detection
+Multi-modal Vision Transformers Excel at Class-agnostic Object Detection
 
 ## Evaluation
 * The proided codebase contains the pre-computed detections for all datasets using ours MDef-DETR model. The provided directory structure is as follows,
@@ -77,4 +77,4 @@ $ python get_multi_dataset_eval_metrics.py
 The calculated metrics will be stored in a `data.csv` file in the same directory.
 
 
-## :rocket: Note: The repository contains the minimum evaluation code. The complete training and inference scripts along with pretrained models will be released soon. Stay Tuned!
+### :rocket: Note: The repository contains the minimum evaluation code. The complete training and inference scripts along with pretrained models will be released soon. Stay Tuned!
