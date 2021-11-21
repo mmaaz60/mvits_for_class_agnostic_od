@@ -6,6 +6,7 @@ Multi-modal Transformers Excel at Class-agnostic Object Detection
 
 ```
 -> README.md
+-> LICENSE
 -> get_eval_metrics.py
 -> get_multi_dataset_eval_metrics.py
 -> data
@@ -29,7 +30,7 @@ Multi-modal Transformers Excel at Class-agnostic Object Detection
 
 Where `combined.pkl` contains the combined detections from multiple intutive text queries for corresponding datasets (refer to section 5.1 for details).
 
-Download the annotations for all datasets and arrange them as shown below. In our work, we downloaded all these annotations from the [open-source resource](http://www.svcl.ucsd.edu/projects/universal-detection). Note that the script expect COCO annotations in standard coco format & annotations of all other datasets in VOC format.
+Download the annotations for all datasets and arrange them as shown below. In our work, we downloaded all these annotations from the [open-source](http://www.svcl.ucsd.edu/projects/universal-detection) resource. Note that the script expect COCO annotations in standard COCO format & annotations of all other datasets in VOC format.
 
 ```
 ...
@@ -74,3 +75,6 @@ $ python get_multi_dataset_eval_metrics.py
 ```
 
 The calculated metrics will be stored in a `data.csv` file in the same directory.
+
+
+## :rocket: Note: The repository contains the minimum evaluation code. The complete training and inference scripts along with pretrained models will be released soon. Stay Tuned!
