@@ -14,7 +14,7 @@ Multi-modal Vision Transformers Excel at Class-agnostic Object Detection
 
 ## Architecture overview of MViTs used in this work
 
-![Architecture overview](images/Block_diag.png)
+![Architecture overview](images/block_diagram.png)
 
 ## Evaluation
 * The provided codebase contains the pre-computed detections for all datasets using ours MDef-DETR model. The provided directory structure is as follows,
