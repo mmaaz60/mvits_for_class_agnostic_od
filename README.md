@@ -1,5 +1,18 @@
 # MViTs Excel at Class-agnostic Object Detection
-Multi-modal Vision Transformers Excel at Class-agnostic Object Detection
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/class-agnostic-object-detection-on-pascal-voc)](https://paperswithcode.com/sota/class-agnostic-object-detection-on-pascal-voc?p=multi-modal-transformers-excel-at-class)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/class-agnostic-object-detection-on-coco)](https://paperswithcode.com/sota/class-agnostic-object-detection-on-coco?p=multi-modal-transformers-excel-at-class)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/class-agnostic-object-detection-on-kitti)](https://paperswithcode.com/sota/class-agnostic-object-detection-on-kitti?p=multi-modal-transformers-excel-at-class)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/class-agnostic-object-detection-on-kitchen)](https://paperswithcode.com/sota/class-agnostic-object-detection-on-kitchen?p=multi-modal-transformers-excel-at-class)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/class-agnostic-object-detection-on-comic2k)](https://paperswithcode.com/sota/class-agnostic-object-detection-on-comic2k?p=multi-modal-transformers-excel-at-class)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/open-world-object-detection-on-pascal-voc)](https://paperswithcode.com/sota/open-world-object-detection-on-pascal-voc?p=multi-modal-transformers-excel-at-class)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/open-world-object-detection-on-coco-2017)](https://paperswithcode.com/sota/open-world-object-detection-on-coco-2017?p=multi-modal-transformers-excel-at-class)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/open-world-object-detection-on-coco-2017-1)](https://paperswithcode.com/sota/open-world-object-detection-on-coco-2017-1?p=multi-modal-transformers-excel-at-class)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/open-world-object-detection-on-coco-2017-2)](https://paperswithcode.com/sota/open-world-object-detection-on-coco-2017-2?p=multi-modal-transformers-excel-at-class)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/object-detection-on-pascal-voc-10)](https://paperswithcode.com/sota/object-detection-on-pascal-voc-10?p=multi-modal-transformers-excel-at-class)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/object-detection-on-pascal-voc-2007)](https://paperswithcode.com/sota/object-detection-on-pascal-voc-2007?p=multi-modal-transformers-excel-at-class)
+
+**Multi-modal Vision Transformers Excel at Class-agnostic Object Detection**
 
 [Muhammad Maaz](https://scholar.google.com/citations?user=vTy9Te8AAAAJ&hl=en&authuser=1&oi=sra), [Hanoona Rasheed](https://scholar.google.com/citations?user=yhDdEuEAAAAJ&hl=en&authuser=1&oi=sra), [Salman Khan](https://salman-h-khan.github.io/), [Fahad Shahbaz Khan](https://scholar.google.es/citations?user=zvaeYnUAAAAJ&hl=en), [Rao Muhammad Anwer](https://scholar.google.com/citations?hl=en&authuser=1&user=_KlvMVoAAAAJ) and [Ming-Hsuan Yang](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en)
 
@@ -16,8 +29,43 @@ Multi-modal Vision Transformers Excel at Class-agnostic Object Detection
 
 ![Architecture overview](images/block_diag.png)
 
+<hr />
+
+## Results
+<hr />
+
+<strong>Class-agnostic OD performance of MViTs</strong> in comparison with uni-modal detector (RetinaNet) on several datasets. MViTs show consistently good results on all datasets.
+
+![Results](images/table_results.png)
+
+<hr />
+
+<strong> Enhanced Interactability</strong>: Effect of using different <strong>intuitive text queries</strong> on the MDef-DETR class-agnostic OD performance.
+Combining detections from multiple queries captures varying aspects of objectness.
+
+![Results](images/combined_queries_results.png)
+
+<hr />
+
+<strong> Generalization to Rare/Novel Classes</strong>: MDef-DETR class-agnostic OD performance on rarely and frequently occurring categories in the pretraining captions.
+The numbers on top of the bars indicate occurrences of the corresponding category in the training dataset.
+The MViT achieves good recall values even for the classes with no or very few occurrences.
+
+![Results](images/recall_rare_categories_results.png)
+
+<hr />
+<strong> Open-world Object Detection</strong>: Effect of using class-agnostic OD proposals from MDef-DETR for pseudo labelling of unknowns in Open World Detector (ORE).
+
+![Results](images/OWOD_results.png)
+
+<hr />
+<strong> Pretraining for Class-aware Object Detection</strong>: Effect of using MDef-DETR proposals for pre-training of DETReg instead of Selective Search proposals.
+
+![Results](images/DETReg_results.png)
+<hr />
+
 ## Evaluation
-* The provided codebase contains the pre-computed detections for all datasets using ours MDef-DETR model. The provided directory structure is as follows,
+The provided codebase contains the pre-computed detections for all datasets using ours MDef-DETR model. The provided directory structure is as follows,
 
 ```
 -> README.md
@@ -45,7 +93,7 @@ Multi-modal Vision Transformers Excel at Class-agnostic Object Detection
 
 Where `combined.pkl` contains the combined detections from multiple intutive text queries for corresponding datasets. (Refer Section 5.1: Enhanced Interactability for more details)
 
-Download the [annotations](http://www.svcl.ucsd.edu/projects/universal-detection) for all datasets and arrange them as shown below. Note that the script expect COCO annotations in standard COCO format & annotations of all other datasets in VOC format.
+Download the [annotations](https://drive.google.com/file/d/14NcjRrDF8AtYI3hwxknIm85fIWhsGdvK/view?usp=sharing) for all datasets and arrange them as shown below. Note that the script expect COCO annotations in standard COCO format & annotations of all other datasets in VOC format.
 
 ```
 ...
@@ -90,12 +138,7 @@ $ python get_multi_dataset_eval_metrics.py
 ```
 
 The calculated metrics will be stored in a `data.csv` file in the same directory.
-
-## Results
-Class-agnostic OD performance of MViTs in comparison with uni-modal detector (RetinaNet) on several out-of-domain datasets. MViTs show consistently good results on all datasets.
-†Proposals on DOTA are generated by multi-scale inference. (Refer Section 3: Multi-modal ViTs as Generic Detectors for more details)
-![Results](images/table_results.png)
-
+<hr />
 
 ## Citation
 If you use our work, please consider citing:
