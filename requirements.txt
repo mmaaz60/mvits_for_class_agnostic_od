@@ -1,0 +1,5 @@
+numpy
+setuptools
+pillow
+tqdm
+transformers~=4.5.1

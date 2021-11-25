@@ -5,10 +5,12 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/class-agnostic-object-detection-on-kitti)](https://paperswithcode.com/sota/class-agnostic-object-detection-on-kitti?p=multi-modal-transformers-excel-at-class)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/class-agnostic-object-detection-on-kitchen)](https://paperswithcode.com/sota/class-agnostic-object-detection-on-kitchen?p=multi-modal-transformers-excel-at-class)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/class-agnostic-object-detection-on-comic2k)](https://paperswithcode.com/sota/class-agnostic-object-detection-on-comic2k?p=multi-modal-transformers-excel-at-class)
+
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/open-world-object-detection-on-pascal-voc)](https://paperswithcode.com/sota/open-world-object-detection-on-pascal-voc?p=multi-modal-transformers-excel-at-class)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/open-world-object-detection-on-coco-2017)](https://paperswithcode.com/sota/open-world-object-detection-on-coco-2017?p=multi-modal-transformers-excel-at-class)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/open-world-object-detection-on-coco-2017-1)](https://paperswithcode.com/sota/open-world-object-detection-on-coco-2017-1?p=multi-modal-transformers-excel-at-class)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/open-world-object-detection-on-coco-2017-2)](https://paperswithcode.com/sota/open-world-object-detection-on-coco-2017-2?p=multi-modal-transformers-excel-at-class)
+
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/object-detection-on-pascal-voc-10)](https://paperswithcode.com/sota/object-detection-on-pascal-voc-10?p=multi-modal-transformers-excel-at-class)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/object-detection-on-pascal-voc-2007)](https://paperswithcode.com/sota/object-detection-on-pascal-voc-2007?p=multi-modal-transformers-excel-at-class)
 
@@ -17,7 +19,10 @@
 [Muhammad Maaz](https://scholar.google.com/citations?user=vTy9Te8AAAAJ&hl=en&authuser=1&oi=sra), [Hanoona Rasheed](https://scholar.google.com/citations?user=yhDdEuEAAAAJ&hl=en&authuser=1&oi=sra), [Salman Khan](https://salman-h-khan.github.io/), [Fahad Shahbaz Khan](https://scholar.google.es/citations?user=zvaeYnUAAAAJ&hl=en), [Rao Muhammad Anwer](https://scholar.google.com/citations?hl=en&authuser=1&user=_KlvMVoAAAAJ) and [Ming-Hsuan Yang](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en)
 
 
-**Paper**: https://arxiv.org/abs/2111.11430
+****Paper**: https://arxiv.org/abs/2111.11430**
+
+## :rocket: News
+* Evaluation code along with pre-trained models & pre-computed predictions is released.
 
 <hr />
 
@@ -29,6 +34,24 @@
 
 ![Architecture overview](images/block_diag.png)
 
+<hr />
+
+## Installation
+The code is tested with PyTorch 1.8.0 and CUDA 11.1. After cloning the repository, follow the below steps for installation,
+
+1. Install PyTorch and torchvision
+```shell
+pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+```
+2. Install other dependencies
+```shell
+pip install -r requirements.txt
+```
+3. Compile Deformable Attention modules
+```shell
+cd models/ops
+sh make.sh
+```
 <hr />
 
 ## Results
@@ -44,6 +67,19 @@
 Combining detections from multiple queries captures varying aspects of objectness.
 
 ![Results](images/combined_queries_results.png)
+
+<hr />
+
+<strong> Language Skeleton/Structure</strong>: Experimental analysis to explore the contribution of language by removing all textual inputs, but maintaining the structure introduced by captions. 
+All experiments are performed on Def-DETR. 
+In setting 1, annotations corresponding to same images are combined. 
+Setting 2 has an additional NMS applied to remove duplicate boxes. 
+In setting 3, four to eight boxes are randomly grouped in each iteration. 
+The same model is trained longer in setting 4. 
+In setting 5, the dataloader structure corresponding to captions is kept intact. 
+Results from setting 5 demonstrate the importance of structure introduced by language.
+
+![Results](images/language_structure.png)
 
 <hr />
 
@@ -65,93 +101,74 @@ The MViT achieves good recall values even for the classes with no or very few oc
 <hr />
 
 ## Evaluation
-The provided codebase contains the pre-computed detections for all datasets using ours MDef-DETR model. The provided directory structure is as follows,
-
+The dataset, pretrained models and pre-computed predictions are available at [this link](https://shortest.link/1Rka).
+Download the datasets (annotations & images) and arrange them as,
 ```
--> README.md
--> LICENSE
--> get_eval_metrics.py
--> get_multi_dataset_eval_metrics.py
--> data
-    -> voc2007
-        -> combined.pkl
-    -> coco
-        -> combined.pkl
-    -> kitti
-        -> combined.pkl
-    -> kitchen
-        -> combined.pkl
-    -> cliaprt
-        -> combined.pkl
-    -> comic
-        -> combined.pkl
-    -> watercolor
-        -> combined.pkl
-    -> dota
-        -> combined.pkl
-```
-
-Where `combined.pkl` contains the combined detections from multiple intutive text queries for corresponding datasets. (Refer Section 5.1: Enhanced Interactability for more details)
-
-Download the [annotations](https://drive.google.com/file/d/14NcjRrDF8AtYI3hwxknIm85fIWhsGdvK/view?usp=sharing) for all datasets and arrange them as shown below. Note that the script expect COCO annotations in standard COCO format & annotations of all other datasets in VOC format.
-
-```
-...
-...
--> data
-    -> voc2007
-        -> combined.pkl
-        -> Annotations
-    -> coco
-        -> combined.pkl
-        -> instances_val2017_filt.json
-    -> kitti
-        -> combined.pkl
-        -> Annotations
-        ...
-    -> kitchen
-        -> combined.pkl
-        -> Annotations
-    -> cliaprt
-        -> combined.pkl
-        -> Annotations
-    -> comic
-        -> combined.pkl
-        -> Annotations
-    -> watercolor
-        -> combined.pkl
-        -> Annotations
-    -> dota
-        -> combined.pkl
-        -> Annotations
+code_root/
+└─ data
+    └─ voc2007
+        ├─ Annotations
+        ├─ JPEGImages
+    └─ coco
+        ├─ instances_val2017.json
+        ├─ val2017
+    └─ kitti
+        ├─ Annotations
+        ├─ JPEGImages
+    └─ kitchen
+        ├─ Annotations
+        ├─ JPEGImages
+    └─ cliaprt
+        ├─ Annotations
+        ├─ JPEGImages
+    └─ comic
+        ├─ Annotations
+        ├─ JPEGImages
+    └─ watercolor
+        ├─ Annotations
+        ├─ JPEGImages
+    └─ dota
+        ├─ Annotations
+        ├─ JPEGImages
 ```
 
-Once the above mentioned directory structure is created, follow the following steps to calculate the metrics.
+Once the above directory structure is created,
+1. Download the pretrained weights from [this link](https://shortest.link/1Rka).
+2. Set the environment variable
+```shell
+export PYTHONPATH="./:$PYTHONPATH"
+```
+3. Run the following script to generate predictions and calculate metrics.
+   1. MDef-DETR
+    ```shell
+    bash scripts/get_mvit_multi_query_metrics.sh <dataset root dir path> <model checkpoints path> 
+    ```
+   2. MDef-DETR w/o Language Branch (trained by maintaining the structure introduced by captions)
+    ```shell
+    bash scripts/get_mvit_minus_language_metrics.sh <dataset root dir path> <model checkpoints path> 
+    ```
 
-1. Install numpy
-```
-$ pip install numpy
-```
-2. Calculate metrics
-```
-$ python get_multi_dataset_eval_metrics.py
+Alternatively, you can also download the pre-computed predictions from [this link](https://shortest.link/1Rka) 
+and run the following scripts to calculate metrics. 
+```shell
+python evaluation/class_agnostic_od/get_multi_dataset_eval_metrics.py <model name>
 ```
 
-The calculated metrics will be stored in a `data.csv` file in the same directory.
+The calculated evaluation metrics will be stored in a `*.csv` file in the same directory.
+
 <hr />
 
 ## Citation
 If you use our work, please consider citing:
-
+```bibtex
     @article{Maaz2021Multimodal,
         title={Multi-modal Transformers Excel at Class-agnostic Object Detection},
         author={Muhammad Maaz and Hanoona Rasheed and Salman Khan and Fahad Shahbaz Khan and Rao Muhammad Anwer and Ming-Hsuan Yang},
         journal={ArXiv 2111.11430},
         year={2021}
     }
+```
 
 ## Contact
-Should you have any question, please contact muhammad.maaz@mbzuai.ac.ae or hanoona.bangalath@mbzuai.ac.ae
+Should you have any question, please create an issue on this repository or contact at muhammad.maaz@mbzuai.ac.ae, hanoona.bangalath@mbzuai.ac.ae
 
-
-### :rocket: Note: The repository contains the minimum evaluation code. The complete training and inference scripts along with pretrained models will be released soon. Stay Tuned!
