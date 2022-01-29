@@ -14,16 +14,19 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/object-detection-on-pascal-voc-10)](https://paperswithcode.com/sota/object-detection-on-pascal-voc-10?p=multi-modal-transformers-excel-at-class)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/object-detection-on-pascal-voc-2007)](https://paperswithcode.com/sota/object-detection-on-pascal-voc-2007?p=multi-modal-transformers-excel-at-class)
 
-**Multi-modal Vision Transformers Excel at Class-agnostic Object Detection**
+### **Multi-modal Vision Transformers Excel at Class-agnostic Object Detection**
 
 [Muhammad Maaz](https://scholar.google.com/citations?user=vTy9Te8AAAAJ&hl=en&authuser=1&oi=sra), [Hanoona Rasheed](https://scholar.google.com/citations?user=yhDdEuEAAAAJ&hl=en&authuser=1&oi=sra), [Salman Khan](https://salman-h-khan.github.io/), [Fahad Shahbaz Khan](https://scholar.google.es/citations?user=zvaeYnUAAAAJ&hl=en), [Rao Muhammad Anwer](https://scholar.google.com/citations?hl=en&authuser=1&user=_KlvMVoAAAAJ) and [Ming-Hsuan Yang](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en)
 
 
-****Paper**: https://arxiv.org/abs/2111.11430**
+### ****Paper**: https://arxiv.org/abs/2111.11430**
 
-## :rocket: News
-* Evaluation code along with pre-trained models & pre-computed predictions is released.
-
+# :rocket: News
+* **(Jan 27, 2022)** 
+  * Training codes for MDef-DETR and 'MDef-DETR minus Language' models are released. -> [training/README.md](training/README.md)
+  * Instructions to use class-agnostic object detection behavior of MDef-DETR on different applications are released. -> [applications/README.md](applications/README.md)
+  * All the pretrained models (MDef-DETR, Def-DETR, MDETR, DETReg, Faster-RCNN, RetinaNet, ORE, and others), along with the instructions to reproduce the results are released. -> [this link](https://drive.google.com/drive/folders/1TLge0mNiL2pV2VygLqKqc1FbEiJEQzJt?usp=sharing)
+* **(Nov 25, 2021)** Evaluation code along with pre-trained models & pre-computed predictions is released. [evaluation/README.md](evaluation/class_agnostic_od/README.md)
 <hr />
 
 ![main figure](images/main_figure.png)
@@ -101,62 +104,15 @@ The MViT achieves good recall values even for the classes with no or very few oc
 <hr />
 
 ## Evaluation
-The dataset, pretrained models and pre-computed predictions are available at [this link](https://shortest.link/1Rka).
-Download the datasets (annotations & images) and arrange them as,
-```
-code_root/
-└─ data
-    └─ voc2007
-        ├─ Annotations
-        ├─ JPEGImages
-    └─ coco
-        ├─ instances_val2017.json
-        ├─ val2017
-    └─ kitti
-        ├─ Annotations
-        ├─ JPEGImages
-    └─ kitchen
-        ├─ Annotations
-        ├─ JPEGImages
-    └─ cliaprt
-        ├─ Annotations
-        ├─ JPEGImages
-    └─ comic
-        ├─ Annotations
-        ├─ JPEGImages
-    └─ watercolor
-        ├─ Annotations
-        ├─ JPEGImages
-    └─ dota
-        ├─ Annotations
-        ├─ JPEGImages
-```
-
-Once the above directory structure is created,
-1. Download the pretrained weights from [this link](https://shortest.link/1Rka).
-2. Set the environment variable
-```shell
-export PYTHONPATH="./:$PYTHONPATH"
-```
-3. Run the following script to generate predictions and calculate metrics.
-   1. MDef-DETR
-    ```shell
-    bash scripts/get_mvit_multi_query_metrics.sh <dataset root dir path> <model checkpoints path> 
-    ```
-   2. MDef-DETR w/o Language Branch (trained by maintaining the structure introduced by captions)
-    ```shell
-    bash scripts/get_mvit_minus_language_metrics.sh <dataset root dir path> <model checkpoints path> 
-    ```
-
-Alternatively, you can also download the pre-computed predictions from [this link](https://shortest.link/1Rka) 
-and run the following scripts to calculate metrics. 
-```shell
-python evaluation/class_agnostic_od/get_multi_dataset_eval_metrics.py <model name>
-```
-
-The calculated evaluation metrics will be stored in a `*.csv` file in the same directory.
+Please refer to [evaluation/class_agnostic_od/README.md](evaluation/class_agnostic_od/README.md).
 
 <hr />
+
+## Training
+Please refer to [training/README.md](training/README.md).
+
+## Applications
+Please refer to [applications/README.md](applications/README.md).
 
 ## Citation
 If you use our work, please consider citing:
