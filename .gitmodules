@@ -1,0 +1,6 @@
+[submodule "training/mdef_detr"]
+	path = training/mdef_detr
+	url = https://github.com/mmaaz60/mdef_detr.git
+[submodule "training/mdef_detr_minus_language"]
+	path = training/mdef_detr_minus_language
+	url = https://github.com/mmaaz60/mdef_detr.git
