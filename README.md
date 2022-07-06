@@ -1,5 +1,4 @@
-# MViTs Excel at Class-agnostic Object Detection (ECCV 2022)
-Official repository of paper titled "Class-agnostic Object Detection with Multi-modal Transformer" published at (ECCV 2022).
+# Class-agnostic Object Detection with Multi-modal Transformer (ECCV 2022)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/class-agnostic-object-detection-on-pascal-voc)](https://paperswithcode.com/sota/class-agnostic-object-detection-on-pascal-voc?p=multi-modal-transformers-excel-at-class)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-modal-transformers-excel-at-class/class-agnostic-object-detection-on-coco)](https://paperswithcode.com/sota/class-agnostic-object-detection-on-coco?p=multi-modal-transformers-excel-at-class)
@@ -24,6 +23,8 @@ Official repository of paper titled "Class-agnostic Object Detection with Multi-
 [![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://drive.google.com/file/d/1Yi2JJwW2bSVNvQZdEdkX2k5XfPqAxvfQ/view?usp=sharing)
 
 # :rocket: News
+* **(July 06, 2022)** 
+  * Paper accepted at ECCV 2022
 * **(Feb 01, 2022)** 
   * Training codes for `MAVL` and `MAVL minus Language` models are released `->` [training/README.md](training/README.md)
   * Instructions to use class-agnostic object detection behavior of MAVL on different applications are released `->` [applications/README.md](applications/README.md)
@@ -72,12 +73,15 @@ sh make.sh
 <hr />
 
 ## Results
-<hr />
+Results of Class-agnostic Object Detection of MViTS including our proposed Multiscale Attention ViT with Late fusion
+(MAVL) model, applications, and exploratory analysis.
+
 <strong>Class-agnostic Object Detection</strong> performance of MViTs in comparison with bottom-up approaches and uni-modal detectors on five natural image OD datasets. MViTs show consistently good results on all datasets.
 
 ![Results](images/table_1.png)
 
 <hr />
+
 <strong>Generalization to New Domains</strong>: Class-agnostic OD performance of MViTs in comparison with uni-modal detector(RetinaNet) on five out-of-domain OD datasets. MViTs show consistently good results on all datasets.
 
 ![Results](images/table_2.png)
@@ -111,14 +115,17 @@ Results from setting 5 demonstrate the importance of structure introduced by lan
 ![Results](images/table_5.png)
 
 <hr />
+
 <strong> Open-world Object Detection</strong>: Effect of using class-agnostic OD proposals from MAVL for pseudo labelling of unknowns in Open World Detector (ORE).
 
 ![Results](images/table_6.png)
 
 <hr />
+
 <strong> Pretraining for Class-aware Object Detection</strong>: Effect of using MAVL proposals for pre-training of DETReg instead of Selective Search proposals.
 
 ![Results](images/table_7.png)
+
 <hr />
 
 ## Evaluation
@@ -132,15 +139,18 @@ Please refer to [training/README.md](training/README.md).
 ## Applications
 Please refer to [applications/README.md](applications/README.md).
 
+<hr />
+
 ## Citation
 If you use our work, please consider citing:
 ```bibtex
-    @article{Maaz2021Multimodal,
-        title={Class-agnostic Object Detection with Multi-modal Transformer},
-        author={Muhammad Maaz and Hanoona Rasheed and Salman Khan and Fahad Shahbaz Khan and Rao Muhammad Anwer and Ming-Hsuan Yang},
-        journal={European Conference on Computer Vision. Springer, 2022.},
-        year={2022}
-    }
+    @inproceedings{Maaz2021Multimodal,
+      title={Class-agnostic Object Detection with Multi-modal Transformer},
+      author={Muhammad Maaz and Hanoona Rasheed and Salman Khan and Fahad Shahbaz Khan and Rao Muhammad Anwer and Ming-Hsuan Yang},
+      booktitle={European Conference on Computer Vision},
+      year={2022},
+      organization={Springer}
+}
 ```
 
 ## Contact
