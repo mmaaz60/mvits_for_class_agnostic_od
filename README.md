@@ -19,7 +19,7 @@
 [Muhammad Maaz](https://scholar.google.com/citations?user=vTy9Te8AAAAJ&hl=en&authuser=1&oi=sra), [Hanoona Rasheed](https://scholar.google.com/citations?user=yhDdEuEAAAAJ&hl=en&authuser=1&oi=sra), [Salman Khan](https://salman-h-khan.github.io/), [Fahad Shahbaz Khan](https://scholar.google.es/citations?user=zvaeYnUAAAAJ&hl=en), [Rao Muhammad Anwer](https://scholar.google.com/citations?hl=en&authuser=1&user=_KlvMVoAAAAJ) and [Ming-Hsuan Yang](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en)
 
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2111.11430)
-[![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://youtu.be/S3bIuheCCPM)
+[![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://youtu.be/pkooyDZAxdA)
 [![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://drive.google.com/file/d/1Yi2JJwW2bSVNvQZdEdkX2k5XfPqAxvfQ/view?usp=sharing)
 
 # :rocket: News
