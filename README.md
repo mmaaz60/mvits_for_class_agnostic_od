@@ -20,7 +20,7 @@
 
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2111.11430)
 [![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://youtu.be/pkooyDZAxdA)
-[![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://drive.google.com/file/d/1Yi2JJwW2bSVNvQZdEdkX2k5XfPqAxvfQ/view?usp=sharing)
+[![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://drive.google.com/file/d/1v8PcbVVOHwzo5LShjB_NQJE7m1rbA9bL)
 
 # :rocket: News
 * **(July 06, 2022)** 
@@ -147,7 +147,7 @@ If you use our work, please consider citing:
     @inproceedings{Maaz2021Multimodal,
       title={Class-agnostic Object Detection with Multi-modal Transformer},
       author={Muhammad Maaz and Hanoona Rasheed and Salman Khan and Fahad Shahbaz Khan and Rao Muhammad Anwer and Ming-Hsuan Yang},
-      booktitle={European Conference on Computer Vision},
+      booktitle={17th European Conference on Computer Vision},
       year={2022},
       organization={Springer}
 }
