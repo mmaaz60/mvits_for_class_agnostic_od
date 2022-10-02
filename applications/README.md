@@ -17,7 +17,7 @@ We modify the ORE annotations using MDef-DETR proposals and then use the instruc
 All of our ORE pretrained models are available at 
 [this link](https://drive.google.com/drive/folders/1PMH6UeETkNPWFJTwLoY9geG10Au8y1Hl?usp=sharing).
 
-![Results](../images/OWOD_results.png)
+![Results](../paper_resources/OWOD_results.png)
 
 ## Pretraining for Class-aware Object Detection (DETReg)
 
@@ -28,4 +28,4 @@ Please refer to the Sec 5.3 of our [paper](https://arxiv.org/abs/2111.11430) for
 All the pretrained models and the ImageNet proposals are available at 
 [this link](https://drive.google.com/drive/folders/1LGhpcgP9qWEfOXaDP9V2wotC5uZ57K_v?usp=sharing).
 
-![Results](../images/DETReg_results.png)
+![Results](../paper_resources/DETReg_results.png)

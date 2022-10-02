@@ -21,6 +21,7 @@
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2111.11430)
 [![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://youtu.be/pkooyDZAxdA)
 [![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://drive.google.com/file/d/1v8PcbVVOHwzo5LShjB_NQJE7m1rbA9bL)
+[![slides](https://img.shields.io/badge/Paper-Poster-87CEEB)](paper_resources/eccv'22_poster.pdf)
 
 # :rocket: News
 * **(July 06, 2022)** 
@@ -32,7 +33,7 @@
 * **(Nov 25, 2021)** Evaluation code along with pre-trained models & pre-computed predictions is released. [evaluation/README.md](evaluation/class_agnostic_od/README.md)
 <hr />
 
-![main figure](images/new_main_figure.jpg)
+![main figure](paper_resources/new_main_figure.jpg)
 > *<div style="text-align: justify"> **Abstract:** What constitutes an object? This has been a long-standing question in computer vision. Towards this goal, numerous learning-free
 and learning-based approaches have been developed to score objectness. However, they generally do not scale well across new domains and novel
 objects. In this paper, we advocate that existing methods lack a top-down supervision signal governed by human-understandable semantics.
@@ -50,7 +51,7 @@ can adaptively generate proposals given a specific language query and thus offer
 Architecture overview of MViTs used in this work – [GPV-1](https://arxiv.org/abs/2104.00743),
 [MDETR](https://openaccess.thecvf.com/content/ICCV2021/papers/Kamath_MDETR_-_Modulated_Detection_for_End-to-End_Multi-Modal_Understanding_ICCV_2021_paper.pdf)
 and Multiscale Attention ViT with Late fusion (MAVL) (ours).
-![Architecture overview](images/new_block_diag.png)
+![Architecture overview](paper_resources/new_block_diag.png)
 
 <hr />
 
@@ -78,13 +79,13 @@ Results of Class-agnostic Object Detection of MViTS including our proposed Multi
 
 <strong>Class-agnostic Object Detection</strong> performance of MViTs in comparison with bottom-up approaches and uni-modal detectors on five natural image OD datasets. MViTs show consistently good results on all datasets.
 
-![Results](images/table_1.png)
+![Results](paper_resources/table_1.png)
 
 <hr />
 
 <strong>Generalization to New Domains</strong>: Class-agnostic OD performance of MViTs in comparison with uni-modal detector(RetinaNet) on five out-of-domain OD datasets. MViTs show consistently good results on all datasets.
 
-![Results](images/table_2.png)
+![Results](paper_resources/table_2.png)
 
 <hr />
 
@@ -92,14 +93,14 @@ Results of Class-agnostic Object Detection of MViTS including our proposed Multi
 The numbers on top of the bars indicate occurrences of the corresponding category in the training dataset.
 The MViT achieves good recall values even for the classes with no or very few occurrences.
 
-![Results](images/table_3.png)
+![Results](paper_resources/table_3.png)
 
 <hr />
 
 <strong> Enhanced Interactability</strong>: Effect of using different <strong>intuitive text queries</strong> on the MAVL class-agnostic OD performance.
 Combining detections from multiple queries captures varying aspects of objectness.
 
-![Results](images/table_4.png)
+![Results](paper_resources/table_4.png)
 
 <hr />
 
@@ -112,19 +113,19 @@ The same model is trained longer in setting 4.
 In setting 5, the dataloader structure corresponding to captions is kept intact. 
 Results from setting 5 demonstrate the importance of structure introduced by language.
 
-![Results](images/table_5.png)
+![Results](paper_resources/table_5.png)
 
 <hr />
 
 <strong> Open-world Object Detection</strong>: Effect of using class-agnostic OD proposals from MAVL for pseudo labelling of unknowns in Open World Detector (ORE).
 
-![Results](images/table_6.png)
+![Results](paper_resources/table_6.png)
 
 <hr />
 
 <strong> Pretraining for Class-aware Object Detection</strong>: Effect of using MAVL proposals for pre-training of DETReg instead of Selective Search proposals.
 
-![Results](images/table_7.png)
+![Results](paper_resources/table_7.png)
 
 <hr />
 
@@ -146,8 +147,8 @@ If you use our work, please consider citing:
 ```bibtex
     @inproceedings{Maaz2022Multimodal,
       title={Class-agnostic Object Detection with Multi-modal Transformer},
-      author={Muhammad Maaz and Hanoona Rasheed and Salman Khan and Fahad Shahbaz Khan and Rao Muhammad Anwer and Ming-Hsuan Yang},
-      booktitle={17th European Conference on Computer Vision},
+      author={Maaz, Muhammad and Rasheed, Hanoona and Khan, Salman and Khan, Fahad Shahbaz and Anwer, Rao Muhammad and Yang, Ming-Hsuan},
+      booktitle={17th European Conference on Computer Vision (ECCV)},
       year={2022},
       organization={Springer}
 }
@@ -156,3 +157,6 @@ If you use our work, please consider citing:
 ## Contact
 Should you have any question, please create an issue on this repository or contact at muhammad.maaz@mbzuai.ac.ae, hanoona.bangalath@mbzuai.ac.ae
 
+## Related Works
+
+- Bridging the Gap between Object and Image-level Representations for Open-Vocabulary Detection, NeurIPS 2022. [Paper](https://arxiv.org/abs/2207.03482) | [Code](https://github.com/hanoonaR/object-centric-ovd)
