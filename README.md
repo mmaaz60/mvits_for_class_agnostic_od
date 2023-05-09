@@ -29,7 +29,7 @@
 * **(Feb 01, 2022)** 
   * Training codes for `MAVL` and `MAVL minus Language` models are released `->` [training/README.md](training/README.md)
   * Instructions to use class-agnostic object detection behavior of MAVL on different applications are released `->` [applications/README.md](applications/README.md)
-  * All the pretrained models (`MAVL`, `Def-DETR`, `MDETR`, `DETReg`, `Faster-RCNN`, `RetinaNet`, `ORE`, and others), along with the instructions to reproduce the results are released `->` [this link](https://drive.google.com/drive/folders/1TLge0mNiL2pV2VygLqKqc1FbEiJEQzJt?usp=sharing)
+  * All the pretrained models (`MAVL`, `Def-DETR`, `MDETR`, `DETReg`, `Faster-RCNN`, `RetinaNet`, `ORE`, and others), along with the instructions to reproduce the results are released `->` [this link](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/muhammad_maaz_mbzuai_ac_ae/Et8rDrc4jkdIuHx4OH52fFUBreLD2-AIUAvO7ZjxtwjU3g?e=lMbeGq)
 * **(Nov 25, 2021)** Evaluation code along with pre-trained models & pre-computed predictions is released. [evaluation/README.md](evaluation/class_agnostic_od/README.md)
 <hr />
 
